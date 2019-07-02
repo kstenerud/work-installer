@@ -1,6 +1,6 @@
 [submodule "bash-installer-common"]
 	path = bash-installer-common
-	url = git@github.com:kstenerud/bash-installer-common.git
+	url = https://github.com/kstenerud/bash-installer-common.git
 [submodule "virtual-builders"]
 	path = virtual-builders
-	url = git@github.com:kstenerud/virtual-builders.git
+	url = https://github.com/kstenerud/virtual-builders.git
