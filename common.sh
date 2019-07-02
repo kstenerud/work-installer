@@ -147,6 +147,8 @@ install_gui_software()
         virt-manager \
         wireshark
 
+    install_packages_from_repository ppa:remmina-ppa-team/remmina-next remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-spice
+
     install_appimage https://github.com/visualfc/liteide/releases/download/x36/liteidex36.linux64-qt5.5.1.AppImage liteide
 }
 
