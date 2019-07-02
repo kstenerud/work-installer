@@ -150,6 +150,9 @@ install_gui_software()
     install_packages_from_repository ppa:remmina-ppa-team/remmina-next remmina remmina-plugin-rdp remmina-plugin-secret remmina-plugin-spice
 
     install_appimage https://github.com/visualfc/liteide/releases/download/x36/liteidex36.linux64-qt5.5.1.AppImage liteide
+
+    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7568D9BB55FF9E5287D586017AE645C0CF8E292A
+    install_packages_from_repository "deb http://repo.pritunl.com/stable/apt bionic main" pritunl-client-electron
 }
 
 install_blackfire_agent()
