@@ -78,8 +78,8 @@ install_dev_software()
 
     install_packages snapd
 
+    # Don't use snap docker because it's broken in 18.04
     install_snaps \
-        docker \
         lxd \
         multipass:classic:beta \
 
@@ -125,6 +125,9 @@ install_dev_software()
         ubuntu-dev-tools \
         uvtool \
         virtinst
+
+    add_repository_keys https://download.docker.com/linux/ubuntu/gpg
+    install_packages_from_repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" docker-ce docker-ce-cli containerd.io
 
     install_git_repo https://github.com/kstenerud/go.git go1.12.6-warn /usr/local/go
 
