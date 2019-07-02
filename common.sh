@@ -128,6 +128,7 @@ install_dev_software()
 
     add_repository_keys https://download.docker.com/linux/ubuntu/gpg
     install_packages_from_repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" docker-ce docker-ce-cli containerd.io
+    install_appimage https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m) docker-compose
 
     install_git_repo https://github.com/kstenerud/go.git go1.12.6-warn /usr/local/go
 
