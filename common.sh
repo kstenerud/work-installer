@@ -98,6 +98,7 @@ install_dev_software()
         libvirt-clients \
         libvirt-daemon \
         libvirt-daemon-system \
+        libtool \
         mtools \
         net-tools \
         nfs-common \
@@ -117,6 +118,7 @@ install_dev_software()
         python3-ubuntutools \
         qemu \
         qemu-kvm \
+        re2c \
         rsnapshot \
         snapcraft \
         squashfuse \
