@@ -140,9 +140,11 @@ install_gui_software()
 {
     install_snaps \
         sublime-text:classic \
+        eclipse:classic
 
     install_packages \
         filezilla \
+        hexchat \
         meld \
         virt-manager \
         wireshark
