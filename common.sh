@@ -95,6 +95,7 @@ install_dev_software()
         dpkg-dev \
         flex \
         libnss-libvirt \
+        libxml2-dev \
         libvirt-clients \
         libvirt-daemon \
         libvirt-daemon-system \
