@@ -94,7 +94,12 @@ install_dev_software()
         devscripts \
         dpkg-dev \
         flex \
+        libcurl4-openssl-dev \
         libnss-libvirt \
+        libpcre3-dev \
+        libreadline-dev \
+        librecode-dev \
+        libssl-dev \
         libxml2-dev \
         libvirt-clients \
         libvirt-daemon \
@@ -127,7 +132,8 @@ install_dev_software()
         tshark \
         ubuntu-dev-tools \
         uvtool \
-        virtinst
+        virtinst \
+        zlib1g-dev
 
     add_repository_keys https://download.docker.com/linux/ubuntu/gpg
     install_packages_from_repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" docker-ce docker-ce-cli containerd.io
@@ -136,7 +142,7 @@ install_dev_software()
     install_git_repo https://github.com/kstenerud/go.git go1.12.6-warn /usr/local/go
 
     # Use LIBVIRT instead of QEMU due to bug launching disco
-    snap set multipass driver=LIBVIRT
+    sudo multipass set local.driver=libvirt
 }
 
 install_gui_software()
