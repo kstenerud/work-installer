@@ -72,6 +72,14 @@ check_user_exists()
     fi
 }
 
+link_sed()
+{
+    # Needed because phpize hardcodes its sed location to /usr/bin/sed
+    pushd /usr/bin >/dev/null
+    ln -s /bin/sed 2>/dev/null || true
+    popd >/dev/null
+}
+
 install_dev_software()
 {
     echo "wireshark-common  wireshark-common/install-setuid boolean true" | debconf-set-selections
@@ -91,14 +99,18 @@ install_dev_software()
         cmake \
         cpu-checker \
         debconf-utils \
+        default-jre \
         devscripts \
         dpkg-dev \
         flex \
         libcurl4-openssl-dev \
         libnss-libvirt \
+        libonig-dev \
         libpcre3-dev \
+        libpq-dev \
         libreadline-dev \
         librecode-dev \
+        libsqlite3-dev \
         libssl-dev \
         libxml2-dev \
         libvirt-clients \
@@ -152,6 +164,7 @@ install_gui_software()
         eclipse:classic
 
     install_packages \
+        ddd-doc \
         filezilla \
         hexchat \
         meld \
@@ -164,6 +177,8 @@ install_gui_software()
 
     sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7568D9BB55FF9E5287D586017AE645C0CF8E292A
     install_packages_from_repository "deb http://repo.pritunl.com/stable/apt bionic main" pritunl-client-electron
+
+    install_packages_from_urls https://go.microsoft.com/fwlink/?LinkID=760868 
 }
 
 install_blackfire_agent()
