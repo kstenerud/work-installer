@@ -107,5 +107,14 @@ $SCRIPT_HOME/virtual-builders/virtual-build windows \
     -I "$INSTALL_ISO" \
     -D "$DRIVERS_ISO"
 
-echo "Windows 10 VM is initializing. Connect VNC client to localhost:5010"
-echo "When installing, choose custom install, and browse for drivers in E:/viostor/w10/amd64"
+echo "Windows 10 VM is initializing. Connect VNC client to localhost:5910"
+echo
+echo "* If you don't have a product key yet, choose \"I don't have a product key\"."
+echo "* For install type, choose \"Custom: Install Windows Only\"."
+echo "* It won't find any drive to install. Click \"Load Driver\", \"Browse\", and look in E:/viostor/w10/amd64"
+echo "* For set up type, choose \"Set up for personal use\""
+echo "* Do not sign in with Microsoft. Instead, click \"Offline account\" in the bottom left corner, then select \"No\" when it asks to use a Microsoft account anyway."
+echo "* All of the features it asks to enable can remain disabled."
+echo
+echo "Once the OS install is complete, install E:\\guest-agent\\qemu-ga-x64.exe, then open Device Manager to install any missing drivers"
+
