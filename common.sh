@@ -93,6 +93,7 @@ install_dev_software()
 
     install_packages \
         autoconf \
+        autoconf2.13 \
         bison \
         bridge-utils \
         build-essential \
