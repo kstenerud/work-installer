@@ -104,6 +104,7 @@ install_dev_software()
         devscripts \
         dpkg-dev \
         flex \
+        graphviz \
         libcurl4-openssl-dev \
         libnss-libvirt \
         libonig-dev \
