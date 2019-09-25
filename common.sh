@@ -90,6 +90,7 @@ install_dev_software()
     install_snaps \
         lxd \
         multipass:classic:beta \
+        protobuf:classic
 
     install_packages \
         autoconf \
