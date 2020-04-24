@@ -88,7 +88,6 @@ install_dev_software()
 
     # Don't use snap docker because it's broken in 18.04
     install_snaps \
-        lxd \
         protobuf:classic
 
     install_packages \
