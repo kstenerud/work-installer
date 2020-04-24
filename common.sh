@@ -86,9 +86,9 @@ install_dev_software()
 
     install_packages snapd
 
-    # Don't use snap docker because it's broken in 18.04
     install_snaps \
-        protobuf:classic
+        protobuf:classic \
+        docker
 
     install_packages \
         autoconf \
@@ -101,6 +101,7 @@ install_dev_software()
         debconf-utils \
         default-jre \
         devscripts \
+        docker-compose \
         dpkg-dev \
         flex \
         graphviz \
@@ -148,11 +149,7 @@ install_dev_software()
         virtinst \
         zlib1g-dev
 
-    add_repository_keys https://download.docker.com/linux/ubuntu/gpg
-    install_packages_from_repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" docker-ce docker-ce-cli containerd.io
-    install_appimage https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m) docker-compose
-
-    install_git_repo https://github.com/kstenerud/go.git go1.12.6-warn /usr/local/go
+    install_git_repo https://github.com/kstenerud/go.git go1.13.9-warn /usr/local/go
 
     # Use LIBVIRT instead of QEMU due to bug launching disco
     # sudo multipass set local.driver=libvirt
