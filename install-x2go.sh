@@ -15,7 +15,7 @@ show_after_help()
 
 install_crd()
 {
-    install_packages_from_repository ppa:x2go/stable \
+    install_packages \
         x2goserver \
         x2goserver-xsession \
         x2goclient
