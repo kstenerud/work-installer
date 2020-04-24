@@ -89,7 +89,6 @@ install_dev_software()
     # Don't use snap docker because it's broken in 18.04
     install_snaps \
         lxd \
-        multipass:classic:beta \
         protobuf:classic
 
     install_packages \
@@ -157,7 +156,7 @@ install_dev_software()
     install_git_repo https://github.com/kstenerud/go.git go1.12.6-warn /usr/local/go
 
     # Use LIBVIRT instead of QEMU due to bug launching disco
-    sudo multipass set local.driver=libvirt
+    # sudo multipass set local.driver=libvirt
 }
 
 install_gui_software()
